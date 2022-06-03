@@ -23,6 +23,7 @@ namespace RockMuseumUI.Models
 
         [RegularExpression(@"[1-5]+$",ErrorMessage ="Rating Must be between 1 to 5")]
         [Required(ErrorMessage = "Please enter a Rating of the Exhibiton")]
+        [StringLength(1, MinimumLength = 1, ErrorMessage = "Please enter Title name at min 3 characters and at max 60 characters")]
         public string Rating { get; set; }
 
     }
